@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Platon, Philebus 66b8–66e6</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Digitalisierung von Burnets Edition der Stephanus' Seiten 66b8–66e6 des Dialogs "Philebus" von Platon.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <!--<p>J. Burnet, Platonis opera, vol. 2, Oxford: Clarendon Press, 1901 (repr. 1967).</p>-->
+            <bibl>
+               <title level="a"><persName ref="http://viaf.org/viaf/108159964">Platonis</persName> opera</title>
+               <editor>J. Burnet</editor>
+               <biblScope unit="volume">2</biblScope>
+               <biblScope unit="page">147</biblScope>
+               <publisher>
+                  <orgName ref="http://viaf.org/viaf/140705396">Clarendon Press</orgName>
+               </publisher> 
+               <date>1901</date> 
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage><language ident="ancient-greek">Ancient Greek</language></langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="S">
+                  <persName xml:lang="gr">Σωκράτης</persName>
+               </person>
+               <person xml:id="Ph">
+                  <persName xml:lang="gr">Φίληβος</persName>
+               </person>
+               <person xml:id="Pr">
+                  <persName xml:lang="gr">Πρώταρχος</persName>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="location-referenced" location="external"/>
+      </encodingDesc>
+   </teiHeader>
+   
+   
+   <text>
+      <front>
+         <div>
+            <listWit>
+               <witness xml:id="B">cod. Bodleianus, MS E. D. Clarke 39</witness>
+               <witness xml:id="T">cod. Venetus Append Class. 4, cod. I</witness>
+               <witness xml:id="W">cod. Vindobonensis 54, suppl. phil. Gr. 7</witness>
+               <witness xml:id="C">cod. Crusianus sive Tubigensis</witness>
+               <witness xml:id="D">cod. Venetus 185</witness>
+               <witness xml:id="G">cod. Venetus Append. Class. 4, cod. 54</witness>
+               <witness xml:id="V">cod. Vindobonensis 109</witness>
+               <witness xml:id="Oxy">Papyrus Oxyrinchita (Grenfell et Hunt V, pp. 243 sqq.</witness>
+            </listWit>
+         </div>
+      </front>
+      <body> 
+         
+         <!--Bemerkungen:
+         1. Ich habe schon die ersten Zeilen mit dem <sp>-Element annotiert und somit das Modell "Dialog/Partien mit Sprecherwechsel" angewendet. Verwenden Sie, bitte, das Modell für den gesamten Text. Tpp: Sie müssen das <ab>-Element löschen und mit etwas ersetzen.
+         2. Ich habe auch eine Liste mit den Sprechern der Dialogs eingebaut. Finden Sie die Liste im Dokument und verwenden Sie die korrekten Referenzen zu den xml-ids!
+         3. Kodieren Sie den Apparat mit entweder mit der Location-referenced Method oder mit der Double End-Point Attachment Method. Wenn Sie die Double End-Point Attachment Method verwenden, müssen Sie eine Zeile in <teiHeader> ändern!
+         4. Vergessen Sie nicht: Ziel ist, die Edition von Burnet zu digitalisieren!
+         5. Während Sie kodieren, machen Sie, bitte, Notizen über die Probleme, die Sie finden, und die Entscheidungen, die Sie treffen.-->
+         
+        
+        <!-- Arbeitsschritte und Überlegungen
+        1. Zunächst habe ich den bereits eingefügten Text in alle seine <sp></sp>-Elemente aufgeteilt, mit der zugehörigen ID versehen und die im Text vorhandenen Abkürzungen mit dem <speaker></speaker>-Element versehen
+        2. Aufteilung der <sp></sp>-Elemente in einzelne Zeilenelemente. 
+           An Zeilenumbrüchen im Text habe ich den in der Edition vorhandenen Trennungsstrich eingefügt.
+           Da hier eine Zeile zu einem Element gemacht wird und nicht ein leeres Linebreak-Elemnt eingesetzt wird, verhindert dies, dass Element,
+           die einen Zeilenumbruch überwinden nicht erfasst werden können. Hier fragt sich, ob der abschnittsweisen Zeilennummerierung der gedruckten Edition zu folgen ist, oder ob abweichend die Zeilen wie sie sind durchnummeriert werden sollten.
+           Außerdem stellt sich diie Frage, ob die Nennunge des Sprechers im Text. Teil der Zeile ist oder, wie in den bereits bearbeiteten ersten Zeilen in gewisser Weise außerhalb der Zeilenstruktur steht. In der Edition, sind sie definitiv
+           Teil der gedruckten Zeile, müssen aber bei einer digitalen reproduktion nicht als Teil dieser Wiedergegeben werden, sondern könnten beispielsweise auch durch eine Farbkodierung, die nicht an eine Zeile gebunden ist,
+           wiedergegeben werden.
+        3. Als nächstes Stellt sich die Frage der Zeilennummerierung beziehungsweise des Umgang mit den in der Edition vorhandenen Abschnittsmarkierungen (c), (d) und (e). Da die ersten bearbeiteten Beispielzeilen
+           nicht der Zeilennummerierung der Edition folgen, nummeriere ich die Zeilen unter Missachtung der Absätze. Die xml:id entspricht aber der in der Edition vorgefundenen, abschnittsweisen Nummerierung.
+           Man könnte nund (c), (d) und (e) aus dem Text entfernen, da die damit kodierte Information in der xml:id der Zeilen ausgedrückt wird und sie ohnehin nicht Teil der tatsächlichen Textzeile sind, sondern der marginalen Zeilennummerierung
+           entsprechen
+        4. Da schon die Arbeit in xml:ids der einzelnen Zeilenelemente gesteckt wurde, erscheint location-referenced die bessere Wahl für den Apparat als double-endpoint-attachment. Zur genauen Verortung der Anmerkung im Text muss ein Lemma-Element
+           angegeben werden. Stellt sich die Frage, wie die Syntax für ein Reading mit mehreren Witness-Attributen funnktioniert: "space-delimited list of one or more pointers indicating the witnesses" (TEI-Guidelines 12.1.2).
+        5. Das nächste und erste schwerwiegendere Problem ist, wie mit den Anmerkungen zu den einzelnen Readings im Apparat der Edition umzugehen ist. om. kann durch ein rdg-element ohne inhalt dargestellt werden. Um den Apparat der Edition wiederzugeben
+           könnte man das om. auch irgendwie einbeziehen. vulgate kann als eigene Quelle deklariert werden, aber secl. und corr. liefern Zusatzinformationen, die so nicht einfach einzubauen sind.
+        6. Auch fraglich, was mit Druckfehlern(?) passiert: Im Text steht νυνδὴ in der ersten Anmerkung aber νυν δὴ. (Bis dahin war der kritische Apparat positiv.) Da es aber um die Digitalisierung der Edition geht, habe ich den Fehler nicht behoben.
+        -->
+        
+         
+        
+       <pb n="147"/>
+        
+         <div type="text">
+           
+           <sp who="#S">
+              <speaker>ΣΩ.</speaker> <l xml:id="b8">Ἆρ’ οὖν οὐ τέταρτα, ἃ τῆς ψυχῆς αὐτῆς ἔθεμεν,</l>
+              <l n="2" xml:id="b9">ἐπιστήμας τε καὶ τέχνας καὶ δόξας ὀρθὰς λεχθείσας, ταῦτ’</l>  
+              <l n="3" xml:id="c1">εἶναι τὰ πρὸς τοῖς τρισὶ τέταρτα, εἴπερ τοῦ ἀγαθοῦ γέ ἐστι</l>
+              <l n="4" xml:id="c2">μᾶλλον <secl resp="Stallbaum">ἢ</secl> τῆς ἡδονῆς συγγενῆ;</l>
+           </sp> 
+            
+           <sp who="#Pr">
+              <speaker>ΠΡΩ.</speaker> <l n="5" xml:id="c3">Τάχ’ ἄν.</l>
+           </sp>
+
+           <sp who="#S">
+             <speaker>ΣΩ.</speaker> <l n="6" xml:id="c4">Πέμπτας τοίνυν, ἃς ἡδονὰς ἔθεμεν ἀλύπους ὁρισά-</l>
+             <l n="7" xml:id="c5">μενοι, καθαρὰς ἐπονομάσαντες τῆς ψυχῆς αὐτῆς, ἐπιστήμαις,</l>
+             <l n="8" xml:id="c6">τὰς δὲ αἰσθήσεσιν ἑπομένας;"</l>
+           </sp>
+
+           <sp who="#Pr">
+             <speaker>ΠΡΩ.</speaker> <l n="9" xml:id="c7"> Ἴσως."</l>
+           </sp>
+
+           <sp who="#S">
+             <speaker>ΣΩ.</speaker> <l n="10" xml:id="c8">“Ἕκτῃ δ’ ἐν γενεᾷ,” φησὶν Ὀρφεύς, “καταπαύ-</l>
+             <l n="11" xml:id="c9">σατε κόσμον ἀοιδῆς·” ἀτὰρ κινδυνεύει καὶ ὁ ἡμέτερος</l>
+             <l n="12" xml:id="c10">λόγος ἐν ἕκτῃ καταπεπαυμένος εἶναι κρίσει. τὸ δὴ μετὰ </l>
+             <l n="13" xml:id="d1">ταῦθ’ ἡμῖν οὐδὲν λοιπὸν πλὴν ὥσπερ κεφαλὴν ἀποδοῦναι</l>
+             <l n="14" xml:id="d2">τοῖς εἰρημένοις."</l>
+           </sp>
+
+           <sp who="#Pr">
+             <speaker>ΠΡΩ.</speaker> <l n="15" xml:id="d3">Οὐκοῦν χρή."</l>
+           </sp>
+
+           <sp who="#S">
+             <speaker>ΣΩ.</speaker> <l n="16" xml:id="d4"> Ἴθι δή, τὸ τρίτον τῷ σωτῆρι τὸν αὐτὸν διαμαρτυρά-</l>
+             <l n="17" xml:id="d5">μενοι λόγον ἐπεξέλθωμεν.</l>
+           </sp>
+
+           <sp who="#Pr">
+             <speaker>ΠΡΩ.</speaker> <l n="18" xml:id="d6">Ποῖον δή;</l>
+           </sp>
+
+           <sp who="#S">
+             <speaker>ΣΩ.</speaker> <l n="19" xml:id="d7">Φίληβος τἀγαθὸν ἐτίθετο ἡμῖν ἡδονὴν εἶναι πᾶσαν</l>
+             <l n="20" xml:id="d8">καὶ παντελῆ."</l>
+           </sp>
+
+           <sp who="#Pr">
+             <speaker>ΠΡΩ.</speaker> <l n="21" xml:id="d9">Τὸ τρίτον, ὦ Σώκρατες, ὡς ἔοικας, ἔλεγες ἀρτίως</l>
+             <l n="22" xml:id="d10">τὸν ἐξ ἀρχῆς ἐπαναλαβεῖν δεῖν λόγον.</l>
+           </sp>
+
+           <sp who="#S">
+             <speaker>ΣΩ.</speaker> <l n="23" xml:id="e1">Ναί, τὸ δέ γε μετὰ τοῦτο ἀκούωμεν. ἐγὼ γὰρ δὴ</l>
+             <l n="24" xml:id="e2">κατιδὼν ἅπερ νυνδὴ διελήλυθα, καὶ δυσχεράνας τὸν Φιλήβου</l>
+             <l n="25" xml:id="e3">λόγον οὐ μόνον ἀλλὰ καὶ ἄλλων πολλάκις μυρίων, εἶπον ὡς</l>
+             <l n="26" xml:id="e4">ἡδονῆς γε νοῦς εἴη μακρῷ βέλτιόν τε καὶ ἄμεινον τῷ τῶν</l>
+             <l n="27" xml:id="e5">ἀνθρώπων βίῳ.</l>
+           </sp>
+
+           <sp who="#Pr">
+             <speaker>ΠΡΩ.</speaker> <l n="28" xml:id="e6"> Ἦν ταῦτα.</l>
+           </sp>
+         
+       
+       </div>
+         
+       <div type="apparatus">
+         
+         <app loc="#b8">
+            <lem wit="#T">Ἆρ’ οὖν οὐ τέταρτα</lem>
+            <rdg wit="#B">Ἇρ᾽ οὐ τέταρτα</rdg>
+            <rdg wit="Jackson">ἇρ᾽ οὖν οὐδ</rdg><!-- Es ist notwendig, dass alles was als value in @wit erscheint auf einen entsprechenden Eintrag in witList referriet.-->
+         </app>
+
+         <app loc="#b8">
+           <lem wit="#B Stobaeus">αὐτῆς ἔθεμεν</lem>
+           <rdg wit="#T">ἔθεμεν αὐτῆς</rdg>
+         </app>
+
+         <app loc="#c1">
+           <lem wit="#T Stobaeus">τέταρτα</lem>
+           <rdg wit="#B">τέτταρα</rdg>
+         </app>
+
+         <app loc="#c1">
+           <lem wit="#T">γέ</lem>
+           <rdg wit="#B"></rdg>
+         </app>
+
+         <app loc="#c2">
+           <lem wit="Stallbaum">ἢ</lem><!-- "secl." bedeutet "seclusit" d.h. "eingeklammert als Interpolation oder falsch". Das was mit "secl." im Apparat annotiert wird, soll, der Meinung der angegebenen Quelle nach, nicht im Text erscheinen. In unserem Fall überliefern die Hss. "μᾶλλον ἢ τῆς" und Stallbaum argumentiert, dass der ursprüngliche Text "μᾶλλον τῆς" war. Naschlagen das Element <secl> in TEI Manual: http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-secl.html-->
+         </app>
+         
+         <app loc="#c2">
+           <lem resp="Stallbaum">μᾶλλον <secl>ἢ</secl> τῆς</lem>
+           <rdg wit="#B #T">μᾶλλον ἢ τῆς</rdg>
+         </app>
+
+         <app loc="#c5">
+           <lem wit="Ven.189">ἐπιστήμαις</lem>
+           <rdg wit="#B #T">ἐπιστήμας</rdg>
+         </app>
+
+         <app loc="#c6">
+           <lem wit="Badham">τὰς</lem>
+           <rdg wit="#B #T Stobaeus">τὰ̑ις</rdg>
+         </app>
+
+         <app loc="#c6">
+           <lem wit="#T Stobaeus">ἑπομένας</lem>
+           <rdg wit="#B">ἑπόμεναι</rdg>
+         </app>
+
+         <app loc="#e2">
+           <lem>νυνδὴ</lem><!-- Hier kann man auch den Witness nennen, nämlich Burnet. Dazu muss man ihn auch in die witListe hinzufügen.-->
+           <rdg wit="#B">νυν δὴ</rdg>
+           <rdg wit="#T Eusebius">νυν</rdg>
+           <rdg wit="vulg">νυνὶ</rdg>
+         </app>
+
+         <app loc="#e2">
+           <lem wit="#T">διελήλυθα</lem>
+           <rdg wit="#B">δυσχεράνας διελήλυθα</rdg>
+         </app>
+
+         <app loc="#e4">
+           <lem wit="#B">εἴη</lem>
+           <rdg wit="#T">εἴη ἃν</rdg>
+         </app>
+
+         <app loc="#e4">
+           <lem wit="#T">μακρῷ</lem>
+           <rdg wit="#B">μακρὸς</rdg>
+         </app>
+         
+       </div>
+      </body>
+      
+      
+      
+      
+      
+      
+     
+      
+      
+      
+   </text>
+</TEI>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Platon, Philebus 66b8–66e6</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Digitalisierung von Burnets Edition der Stephanus' Seiten 66b8–66e6 des Dialogs "Philebus" von Platon.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <!--<p>J. Burnet, Platonis opera, vol. 2, Oxford: Clarendon Press, 1901 (repr. 1967).</p>-->
+            <bibl>
+               <title level="a"><persName ref="http://viaf.org/viaf/108159964">Platonis</persName> opera</title>
+               <editor>J. Burnet</editor>
+               <biblScope unit="volume">2</biblScope>
+               <biblScope unit="page">147</biblScope>
+               <publisher>
+                  <orgName ref="http://viaf.org/viaf/140705396">Clarendon Press</orgName>
+               </publisher>
+               <date>1901</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage><language ident="ancient-greek">Ancient Greek</language></langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="S">
+                  <persName xml:lang="gr">Σωκράτης</persName>
+               </person>
+               <person xml:id="Ph">
+                  <persName xml:lang="gr">Φίληβος</persName>
+               </person>
+               <person xml:id="Pr">
+                  <persName xml:lang="gr">Πρώταρχος</persName>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="location-referenced" location="external"/>
+      </encodingDesc>
+   </teiHeader>
+
+
+   <text>
+      <front>
+         <div>
+            <listWit>
+               <witness xml:id="B">cod. Bodleianus, MS E. D. Clarke 39</witness>
+               <witness xml:id="T">cod. Venetus Append Class. 4, cod. I</witness>
+               <witness xml:id="W">cod. Vindobonensis 54, suppl. phil. Gr. 7</witness>
+               <witness xml:id="C">cod. Crusianus sive Tubigensis</witness>
+               <witness xml:id="D">cod. Venetus 185</witness>
+               <witness xml:id="G">cod. Venetus A<sic><corr><q></q></corr></sic>ppend. Class. 4, cod. 54</witness>
+               <witness xml:id="V">cod. Vindobonensis 109</witness>
+               <witness xml:id="Oxy">Papyrus Oxyrinchita (Grenfell et Hunt V, pp. 243 sqq.)</witness>
+            </listWit>
+         </div>
+      </front>
+      <body>
+
+         <!--Bemerkungen:
+         1. Ich habe schon die ersten Zeilen mit dem <sp>-Element annotiert und somit das Modell "Dialog/Partien mit Sprecherwechsel" angewendet. Verwenden Sie, bitte, das Modell für den gesamten Text. Tpp: Sie müssen das <ab>-Element löschen und mit etwas ersetzen.
+         2. Ich habe auch eine Liste mit den Sprechern der Dialogs eingebaut. Finden Sie die Liste im Dokument und verwenden Sie die korrekten Referenzen zu den xml-ids!
+         3. Kodieren Sie den Apparat mit entweder mit der Location-referenced Method oder mit der Double End-Point Attachment Method. Wenn Sie die Double End-Point Attachment Method verwenden, müssen Sie eine Zeile in <teiHeader> ändern!
+         4. Vergessen Sie nicht: Ziel ist, die Edition von Burnet zu digitalisieren!
+         5. Während Sie kodieren, machen Sie, bitte, Notizen über die Probleme, die Sie finden, und die Entscheidungen, die Sie treffen.-->
+
+            <pb n="147"/>
+         <div type="text">
+
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+						<l xml:id="l1">Ἆρ’ οὖν οὐ τέταρτα, ἃ τῆς ψυχῆς αὐτῆς ἔθεμεν,</l>
+            <l n="2" xml:id="l2">ἐπιστήμας τε καὶ τέχνας καὶ δόξας ὀρθὰς λεχθείσας, ταῦτ’ <!--(c)--></l>
+            <l n="3" xml:id="l3">εἶναι τὰ πρὸς τοῖς τρισὶ τέταρτα, εἴπερ τοῦ ἀγαθοῦ γέ ἐστι</l>
+            <l n="4" xml:id="l4">μᾶλλον [ἢ] τῆς ἡδονῆς συγγενῆ;</l>
+            </sp>
+
+            <sp who="#Pr">
+							 <speaker>ΠΡΩ.</speaker>
+						<l n="5" xml:id="l5">Τάχ’ ἄν.</l>
+						</sp>
+
+						<sp who="#S">
+							 <speaker>ΣΩ.</speaker>
+					  <l n="6" xml:id="l6">Πέμπτας τοίνυν, ἃς ἡδονὰς ἔθεμεν ἀλύπους ὁρισά-</l>
+            <l n="7" xml:id="l7">μενοι, καθαρὰς ἐπονομάσαντες τῆς ψυχῆς αὐτῆς, ἐπιστήμαις,</l>
+						<l n="8" xml:id="l8">τὰς δὲ αἰσθήσεσιν ἑπομένας;</l>
+						</sp>
+
+						<sp who="#Pr">
+							 <speaker>ΠΡΩ.</speaker>
+            <l n="9" xml:id="l9"> Ἴσως.</l>
+						</sp>
+
+						<sp who="#S">
+							 <speaker>ΣΩ.</speaker>
+						<l n="10" xml:id="l10">“Ἕκτῃ δ’ ἐν γενεᾷ,” φησὶν Ὀρφεύς, “καταπαύ-</l>
+						<l n="11" xml:id="l11">σατε κόσμον ἀοιδῆς·” ἀτὰρ κινδυνεύει καὶ ὁ ἡμέτερος</l>
+						<l n="12" xml:id="l12">λόγος ἐν ἕκτῃ καταπεπαυμένος εἶναι κρίσει. τὸ δὴ μετὰ</l>
+						<l n="13" xml:id="l13"><!--(d)--> ταῦθ’ ἡμῖν οὐδὲν λοιπὸν πλὴν ὥσπερ κεφαλὴν ἀποδοῦναι</l>
+						<l n="14" xml:id="l14">τοῖς εἰρημένοις.</l>
+            </sp>
+
+						<sp who="#Pr">
+ 						  <speaker>ΠΡΩ.</speaker>
+ 					 <l n="15" xml:id="l15">Οὐκοῦν χρή.</l>
+					 </sp>
+
+					 <sp who="#S">
+							<speaker>ΣΩ.</speaker>
+					 <l n="16" xml:id="l16"> Ἴθι δή, τὸ τρίτον τῷ σωτῆρι τὸν αὐτὸν διαμαρτυρά-</l>
+					 <l n="17" xml:id="l17">μενοι λόγον ἐπεξέλθωμεν.</l>
+					 </sp>
+
+					<sp who="#Pr">
+						 <speaker>ΠΡΩ.</speaker>
+					<l n="18" xml:id="l18">Ποῖον δή;</l>
+					</sp>
+
+					<sp who="#S">
+						 <speaker>ΣΩ.</speaker>
+					<l n="19" xml:id="l19">Φίληβος τἀγαθὸν ἐτίθετο ἡμῖν ἡδονὴν εἶναι πᾶσαν</l>
+					<l n="20" xml:id="l20">καὶ παντελῆ.</l>
+					</sp>
+
+					<sp who="#Pr">
+					   <speaker>ΠΡΩ.</speaker>
+					<l n="21" xml:id="l21">Τὸ τρίτον, ὦ Σώκρατες, ὡς ἔοικας, ἔλεγες ἀρτίως</l>
+					<l n="22" xml:id="l22">τὸν ἐξ ἀρχῆς ἐπαναλαβεῖν δεῖν λόγον.</l>
+					</sp>
+
+					<sp who="#S">
+						 <speaker>ΣΩ.</speaker>
+					<l n="23" xml:id="l23">(e)Ναί, τὸ δέ γε μετὰ τοῦτο ἀκούωμεν. ἐγὼ γὰρ δὴ</l>
+					<l n="24" xml:id="l24">κατιδὼν ἅπερ νυνδὴ διελήλυθα, καὶ δυσχεράνας τὸν Φιλήβου</l>
+					<l n="25" xml:id="l25">λόγον οὐ μόνον ἀλλὰ καὶ ἄλλων πολλάκις μυρίων, εἶπον ὡς</l>
+					<l n="26" xml:id="l26">ἡδονῆς γε νοῦς εἴη μακρῷ βέλτιόν τε καὶ ἄμεινον τῷ τῶν</l>
+					<l n="27" xml:id="l27">ἀνθρώπων βίῳ.</l>
+					</sp>
+
+					<sp who="#Pr">
+						 <speaker>ΠΡΩ.</speaker>
+					<l n="28" xml:id="l28">Ἦν ταῦτα.</l>
+          </sp>
+
+         </div>
+			 </body>
+		   </text>
+
+
+       <text>
+       <body>
+         <div type="apparatus">
+            <app loc="#l1">
+               <lem wit="#T">Ἆρ’ οὖν οὐ τέταρτα</lem>
+               <rdg wit="#B">Ἇρ᾽ οὐ τέταρτα</rdg>
+               <rdg wit="Jackson">ἇρ᾽ οὖν οὐδ</rdg>
+            </app>
+
+            <app loc="#l1">
+							<lem wit="#B" "Stobaeus">αὐτῆς ἔθεμεν</lem>
+							<rdg wit="#T">ἔθεμεν αὐτῆς</rdg>
+						</app>
+
+						<app loc="#l3">
+							<lem wit="#T" "Stobaeus">τέταρτα</lem>
+							<rdg wit="#B">τέταττα</rdg>
+						</app>
+
+						<app loc="#l3">
+							<lem wit="#T">γε</lem>
+							<rdg wit="#Β">om.</rdg>         <!--Wie müssen wir die Abkürzung om. kodieren?-->
+						</app>
+
+						<app loc="#l4">
+							<lem wit="Stallbaum">ἢ secl.</lem>    <!--Wie müssen wir die Abkürzung secl. kodieren?-->
+						</app>
+
+						<app loc="#l7">
+							<lem wit="Ven. 189">corr. ἐπιστήμαις</lem>    <!--Wie müssen wir die Abkürzung corr. kodieren?-->
+							<rdg wit="#B" "#Τ">ἐπιστήμας</rdg>
+            </app>
+
+            <app loc="#l8">
+							<lem wit="Badham">τὰς</lem>
+							<rdg wit="#B" "#T" "Stobaeus">ταῖς</rdg>
+            </app>
+
+						<app loc="#l8">
+							<lem wit="#Τ" "Stobaeus">ἑπομένας</lem>
+							<rdg wit="#B">ἑπόμεναι</rdg>
+						</app>
+
+            <app loc="#l24">
+              <rdg wit="#Β">νῦν δὴ</rdg>
+							<rdg wit="#T" "Eusebius">νῦν</rdg>
+							<rdg wit="vulg.">νυνὶ</rdg>   <!--Wie müssen wir die Abkürzung vulg. kodieren?-->
+						</app>
+
+						<app loc="#l24">
+              <lem wit="#Τ">διελήλυθα</lem>
+							<rdg wit="#Β">δυσχεράνας διελήλυθα</rdg>
+						</app>
+
+						<app loc="#l26">
+              <lem wit="#Β">εἴη</lem>
+							<rdg wit="#Τ">εἴη ἂν</rdg>
+            </app>
+
+						<app loc="#l26">
+							<lem wit="#Τ">μακρῷ</lem>
+							<rdg wit="#Β">μακρὸς</rdg>
+						</app>
+
+				</div>
+				</body>
+        </text>

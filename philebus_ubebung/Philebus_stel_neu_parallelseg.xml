@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Platon, Philebus 66b8–66e6</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Digitalisierung von Burnets Edition der Stephanus' Seiten 66b8–66e6 des Dialogs "Philebus" von Platon.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl> <title level="a"><persName ref="http://viaf.org/viaf/108159964">Platonis</persName> opera</title> <editor>J. Burnet</editor> <biblScope unit="volume">2</biblScope> <biblScope unit="page">147</biblScope> <publisher> <orgName ref="http://viaf.org/viaf/140705396">Clarendon Press</orgName> </publisher> <date>1901</date> </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ancient-greek">Ancient Greek</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="S">
+                  <persName xml:lang="gr">Σωκράτης</persName>
+               </person>
+               <person xml:id="Ph">
+                  <persName xml:lang="gr">Φίληβος</persName>
+               </person>
+               <person xml:id="Pr">
+                  <persName xml:lang="gr">Πρώταρχος</persName>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <listWit>
+               <witness xml:id="B">cod. Bodleianus, MS E. D. Clarke 39</witness>
+               <witness xml:id="T">cod. Venetus Append Class. 4, cod. I</witness>
+               <witness xml:id="W">cod. Vindobonensis 54, suppl. phil. Gr. 7</witness>
+               <witness xml:id="C">cod. Crusianus sive Tubigensis</witness>
+               <witness xml:id="D">cod. Venetus 185</witness>
+               <witness xml:id="G">cod. Venetus Append. Class. 4, cod. 54</witness>
+               <witness xml:id="V">cod. Vindobonensis 109</witness>
+               <witness xml:id="Oxy">Papyrus Oxyrinchita (Grenfell et Hunt V, pp. 243 sqq.</witness>
+            </listWit>
+         </div>
+         <div type="editions">
+            <listWit>
+               <witness xml:id="Stallbaum"><bibl> <editor ref="http://viaf.org/viaf/46886722">Stallbaum, Johann Gottfried</editor> <title>Platonis, Philebus</title> <series>Platonis opera omnia, 9.2</series> <pubPlace>Gotha ; Erfurt</pubPlace> <publisher>Henning</publisher> <date>1842</date> </bibl></witness>
+               <witness xml:id="Badham"><bibl> <editor>Badham, Charles</editor> <title>Platonis Philebus with Introduction and Notes</title> <pubPlace>London</pubPlace> <publisher>John W. Parker and Son</publisher> <date>1855</date> </bibl></witness>
+               <witness xml:id="Burnet"><bibl> <editor>Burnet, Ioannes</editor> <title>Platonis Opera Tomus II</title> <pubPlace>Oxonii</pubPlace> <publisher>e typographeo Clarendoniano</publisher> <date>1901</date> </bibl></witness>
+            </listWit>
+         </div>
+         <div type="articles">
+            <listBibl>
+               <bibl xml:id="Jackson"> <author>Jackson, Henry</author> <title level="a">Plato Philebus 66 B</title> <title level="j">The Journal of Philology</title> <biblScope unit="volume">24</biblScope> <biblScope unit="page">48</biblScope> <date>1896</date> </bibl>
+            </listBibl>
+         </div>
+      </front>
+      <body>
+         <div type="text">
+            <pb n="147"/>
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+               <ab> <app>
+                  <lem wit="#T">Ἆρ’ οὖν οὐ τέταρτα</lem>
+                  <rdg wit="#B">Ἀρ᾽ οὐ τέταρτα</rdg>
+                  <rdg source="#Jackson">Ἀρ᾽ οὖν οὐδ᾽</rdg>
+                  </app> , ἃ τῆς ψυχῆς <app>
+                  <lem wit="#B #Stobaeus">αὐτῆς ἔθεμεν</lem>
+                  <rdg wit="#T">ἔθεμεν αὐτῆς</rdg>
+                  </app>,
+                  <lb/>ἐπιστήμας τε καὶ τέχνας καὶ δόξας ὀρθὰς λεχθείσας, ταῦτ’
+                  <lb/><milestone unit="stephanus-page" n="66c1"/>εἶναι τὰ πρὸς τοῖς τρισὶ <app>
+                  <lem wit="#T #Stobaeus">τέταρτα</lem>
+                  <rdg wit="#B">τέτταρα</rdg>
+                  </app>, εἴπερ τοῦ ἀγαθοῦ <app>
+                  <lem wit="#T">γέ</lem>
+                  <rdg wit="#B"/>
+                  </app> ἐστι
+                  <lb/>μᾶλλον <secl resp="#Stallbaum">ἢ</secl> τῆς ἡδονῆς συγγενῆ;</ab>
+            </sp>
+            <sp who="#Pr">
+               <speaker>ΠΡΩ.</speaker>
+               <ab>Τάχ’ ἄν.</ab>
+            </sp>
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+               <ab>Πέμπτας τοίνυν, ἃς ἡδονὰς ἔθεμεν ἀλύπους ὁρισά-
+                  <lb break="no"/>μενοι, καθαρὰς ἐπονομάσαντες τῆς ψυχῆς αὐτῆς, <app>
+                  <lem wit="#Ven.189">ἐπιστήμαις</lem>
+                  <rdg wit="#B #T">ἐπιστήμας</rdg>
+                  </app>,
+                  <lb/><app>
+                  <lem source="#Badham">τὰς</lem>
+                  <rdg wit="#B #T #Stobaeus">τὰς</rdg>
+                  </app> δὲ αἰσθήσεσιν <app>
+                  <lem wit="#T #Stobaeus">ἑπομένας</lem>
+                  <rdg wit="#B">ἑπόμεναι</rdg>
+                  </app>;</ab>
+            </sp>
+            <sp who="#Pr">
+               <speaker>ΠΡΩ.</speaker>
+               <ab> Ἴσως.</ab>
+            </sp>
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+               <ab><q who="Orpheas">Ἕκτῃ δ’ ἐν γενεᾷ,</q> φησὶν Ὀρφεύς, <q>“καταπαύ-
+                  <lb break="no"/>σατε κόσμον ἀοιδῆς·”</q> ἀτὰρ κινδυνεύει καὶ ὁ ἡμέτερος
+                  <lb/>λόγος ἐν ἕκτῃ καταπεπαυμένος εἶναι κρίσει. τὸ δὴ μετὰ
+                  <lb/>ταῦθ’ ἡμῖν οὐδὲν λοιπὸν πλὴν ὥσπερ κεφαλὴν ἀποδοῦναι
+                  <lb/>τοῖς εἰρημένοις."</ab>
+            </sp>
+            <sp who="#Pr">
+               <speaker>ΠΡΩ.</speaker>
+               <ab>Οὐκοῦν χρή.</ab>
+            </sp>
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+               <ab> Ἴθι δή, τὸ τρίτον τῷ σωτῆρι τὸν αὐτὸν διαμαρτυρά-
+                  <lb break="no"/>μενοι λόγον ἐπεξέλθωμεν.</ab>
+            </sp>
+            <sp who="#Pr">
+               <speaker>ΠΡΩ.</speaker>
+               <ab>Ποῖον δή;</ab>
+            </sp>
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+               <ab>Φίληβος τἀγαθὸν ἐτίθετο ἡμῖν ἡδονὴν εἶναι πᾶσαν
+                  <lb/>καὶ παντελῆ.</ab>
+            </sp>
+            <sp who="#Pr">
+               <speaker>ΠΡΩ.</speaker>
+               <ab>Τὸ τρίτον, ὦ Σώκρατες, ὡς ἔοικας, ἔλεγες ἀρτίως
+                  <lb/>τὸν ἐξ ἀρχῆς ἐπαναλαβεῖν δεῖν λόγον.</ab>
+            </sp>
+            <sp who="#S">
+               <speaker>ΣΩ.</speaker>
+               <ab>Ναί, τὸ δέ γε μετὰ τοῦτο ἀκούωμεν. ἐγὼ γὰρ δὴ
+                  <lb/>κατιδὼν ἅπερ <app>
+                  <lem source="#Burnet">νυνδὴ</lem>
+                  <rdg wit="#B">νῦν δὴ</rdg>
+                  <rdg wit="#T #Eusebius">νῦν</rdg>
+                  <rdg wit="#vulg">νυνὶ</rdg>
+                  </app> <app>
+                  <lem wit="#T">διελήλυθα</lem>
+                  <rdg wit="#B">δυσχεράνας διελύλυθα</rdg>
+                  </app>, καὶ δυσχεράνας τὸν Φιλήβου
+                  <lb/>λόγον οὐ μόνον ἀλλὰ καὶ ἄλλων πολλάκις μυρίων, εἶπον ὡς
+                  <lb/>ἡδονῆς γε νοῦς <app>
+                  <lem wit="#B">εἴη</lem>
+                  <rdg wit="#T">εἴη ἂν</rdg>
+                  </app> <app>
+                  <lem wit="#T">μακρῷ</lem>
+                  <rdg wit="#B">μακρὸς</rdg>
+                  </app> βέλτιόν τε καὶ ἄμεινον τῷ τῶν
+                  <lb/>ἀνθρώπων βίῳ.</ab>
+            </sp>
+            <sp who="#Pr">
+               <speaker>ΠΡΩ.</speaker>
+               <ab> Ἦν ταῦτα.</ab>
+            </sp>
+         </div>
+      </body>
+   </text>
+</TEI>

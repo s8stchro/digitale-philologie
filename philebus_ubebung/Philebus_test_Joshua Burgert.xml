@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Platon, Philebus 66b8–66e6</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Digitalisierung von Burnets Edition der Stephanus' Seiten 66b8–66e6 des Dialogs "Philebus" von Platon.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <!--<p>J. Burnet, Platonis opera, vol. 2, Oxford: Clarendon Press, 1901 (repr. 1967).</p>-->
+            <bibl>
+               <title level="a"><persName ref="http://viaf.org/viaf/108159964">Platonis</persName> opera</title>
+               <editor>J. Burnet</editor>
+               <biblScope unit="volume">2</biblScope>
+               <biblScope unit="page">147</biblScope>
+               <publisher>
+                  <orgName ref="http://viaf.org/viaf/140705396">Clarendon Press</orgName>
+               </publisher>
+               <date>1901</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage><language ident="ancient-greek">Ancient Greek</language></langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="S">
+                  <persName xml:lang="gr">Σωκράτης</persName>
+               </person>
+               <person xml:id="Ph">
+                  <persName xml:lang="gr">Φίληβος</persName>
+               </person>
+               <person xml:id="Pr">
+                  <persName xml:lang="gr">Πρώταρχος</persName>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="location-referenced" location="external"/> <!-- für End-Point Attachment Method müsste ich hier etwas verändern, nicht wahr-->
+      </encodingDesc>
+   </teiHeader>
+
+
+   <text>
+      <front>
+         <div>
+            <listWit>
+               <witness xml:id="B">cod. Bodleianus, MS E. D. Clarke 39</witness>
+               <witness xml:id="T">cod. Venetus Append Class. 4, cod. I</witness>
+               <witness xml:id="W">cod. Vindobonensis 54, suppl. phil. Gr. 7</witness>
+               <witness xml:id="C">cod. Crusianus sive Tubigensis</witness>
+               <witness xml:id="D">cod. Venetus 185</witness>
+               <witness xml:id="G">cod. Venetus Append. Class. 4, cod. 54</witness>
+               <witness xml:id="V">cod. Vindobonensis 109</witness>
+               <witness xml:id="Oxy">Papyrus Oxyrinchita (Grenfell et Hunt V, pp. 243 sqq.</witness>
+            </listWit>
+         </div>
+      </front>
+      <body>
+
+         <!--Bemerkungen:
+         1. Ich habe schon die ersten Zeilen mit dem <sp>-Element annotiert und somit das Modell "Dialog/Partien mit Sprecherwechsel" angewendet. Verwenden Sie, bitte, das Modell für den gesamten Text. Tpp: Sie müssen das <ab>-Element löschen und mit etwas ersetzen.
+         2. Ich habe auch eine Liste mit den Sprechern der Dialogs eingebaut. Finden Sie die Liste im Dokument und verwenden Sie die korrekten Referenzen zu den xml-ids!
+         3. Kodieren Sie den Apparat mit entweder mit der Location-referenced Method oder mit der Double End-Point Attachment Method. Wenn Sie die Double End-Point Attachment Method verwenden, müssen Sie eine Zeile in <teiHeader> ändern!
+         4. Vergessen Sie nicht: Ziel ist, die Edition von Burnet zu digitalisieren!
+         5. Während Sie kodieren, machen Sie, bitte, Notizen über die Probleme, die Sie finden, und die Entscheidungen, die Sie treffen.-->
+
+            <pb n="147"/>
+         <div type="text">
+            <sp who="#S">
+            <speaker>ΣΩ.</speaker>
+							<l n="1" xml:id="lb8">Ἆρ’ οὖν οὐ τέταρτα, ἃ τῆς ψυχῆς αὐτῆς ἔθεμεν,</l>
+            	<l n="2" xml:id="lb9">ἐπιστήμας τε καὶ τέχνας καὶ δόξας ὀρθὰς λεχθείσας, ταῦτ’</l>
+            	<l n="3" xml:id="lc1">εἶναι τὰ πρὸς τοῖς τρισὶ τέταρτα, εἴπερ τοῦ ἀγαθοῦ γέ ἐστι</l>
+            	<l n="4" xml:id="lc2">μᾶλλον [ἢ] τῆς ἡδονῆς συγγενῆ;</l>
+            </sp> <!-- ich weiß, dass die xml:id im normalen Gebrauch unmöglich sind zu verwenden, da sie auf jeder Seite auftauchen würden, aber in dieser Aufgabenstellung ist es möglich =) -->
+
+						<sp who="#Pr">
+            <speaker>ΠΡΩ.</speaker>
+							<l n="1" xml:id="lc3"> Τάχ’ ἄν. </l> <!-- Hier habe ich mir überlegt, ob ich die Zeilenzählung für die ganze Seite fortsetzen oder ob ich sie für jeden Teil seperat zählen soll. Ich denke jetzt macht es keinen Unterschied, daher fande ich immer wieder von Vorne an. -->
+						</sp>
+
+						<sp who="#S">
+            <speaker>ΣΩ.</speaker> <!-- eigentlich müsste diese Teil auch noch in die erste Zeile, aber der Übersicht halber lasse ich es mal dort-->
+						 <l n="1" xml:id="lc4">Πέμπτας τοίνυν, ἃς ἡδονὰς ἔθεμεν ἀλύπους ὁρισά-</l> <!-- würde ich jetzt eine Ausgabe für linguistische Zwecke machen, müsste ich mir eine Lösung die Worttrennung einfallen lassen, aber das lass ich mal hier-->
+						 <l n="2" xml:id="lc5">μενοι, καθαρὰς ἐπονομάσαντες τῆς ψυχῆς αὐτῆς, ἐπιστήμαις,</l>
+						 <l n="3" xml:id="lc6">τὰς δὲ αἰσθήσεσιν ἑπομένας;</l>
+						</sp>
+
+						<sp who="#Pr">
+						<speaker>ΠΡΩ.</speaker>
+							<l n="1" xml:id="lc7"> Ἴσως.</l>
+						</sp>
+
+						<sp who="#S">
+            <speaker>ΣΩ.</speaker>
+							<l n="1" xml:id="lc8">“Ἕκτῃ δ’ ἐν γενεᾷ,” φησὶν Ὀρφεύς, “καταπαύ-</l>
+							<l n="2" xml:id="lc9">σατε κόσμον ἀοιδῆς·” ἀτὰρ κινδυνεύει καὶ ὁ ἡμέτερος</l>
+							<l n="3" xml:id="lc10">λόγος ἐν ἕκτῃ καταπεπαυμένος εἶναι κρίσει. τὸ δὴ μετὰ</l>
+							<l n="4" xml:id="ld1">ταῦθ’ ἡμῖν οὐδὲν λοιπὸν πλὴν ὥσπερ κεφαλὴν ἀποδοῦναι</l>
+							<l n="5" xml:id="ld2">τοῖς εἰρημένοις.</l>
+							</sp>
+
+							<sp who="#Pr">
+							<speaker>ΠΡΩ.</speaker>
+							<l n="1" xml:id="ld3">Οὐκοῦν χρή.</l>
+							</sp>
+
+							<sp who="#S">
+	            <speaker>ΣΩ.</speaker>
+							<l n="1" xml:id="ld4"> Ἴθι δή, τὸ τρίτον τῷ σωτῆρι τὸν αὐτὸν διαμαρτυρά-</l>
+							<l n="2" xml:id="ld5">μενοι λόγον ἐπεξέλθωμεν.</l>
+							</sp>
+
+							<sp who="#Pr">
+							<speaker>ΠΡΩ.</speaker>
+							<l n="1" xml:id="ld6">Ποῖον δή;</l>
+							</sp>
+
+						<sp who="#S">
+	          <speaker>ΣΩ.</speaker>
+							<l n="1" xml:id="ld7">Φίληβος τἀγαθὸν ἐτίθετο ἡμῖν ἡδονὴν εἶναι πᾶσαν</l>
+							<l n="2" xml:id="ld8">καὶ παντελῆ.</l>
+							</sp>
+
+							<sp who="#Pr">
+							<speaker>ΠΡΩ.</speaker>
+							<l n="1" xml:id="ld9">Τὸ τρίτον, ὦ Σώκρατες, ὡς ἔοικας, ἔλεγες ἀρτίως</l>
+							<l n="2" xml:id="ld10">τὸν ἐξ ἀρχῆς ἐπαναλαβεῖν δεῖν λόγον.</l>
+							</sp>
+
+							<sp who="#S">
+	            <speaker>ΣΩ.</speaker>
+							<l n="1" xml:id="le1">Ναί, τὸ δέ γε μετὰ τοῦτο ἀκούωμεν.   ἐγὼ γὰρ δὴ</l>
+							<l n="2" xml:id="le2">κατιδὼν ἅπερ νυνδὴ διελήλυθα, καὶ δυσχεράνας τὸν Φιλήβου</l>
+							<l n="3" xml:id="le3">λόγον οὐ μόνον ἀλλὰ καὶ ἄλλων πολλάκις μυρίων, εἶπον ὡς</l>
+							<l n="4" xml:id="le4">ἡδονῆς γε νοῦς εἴη μακρῷ βέλτιόν τε καὶ ἄμεινον τῷ τῶν</l>
+							<l n="5" xml:id="le5">ἀνθρώπων βίῳ.</l>
+						  </sp>
+
+							<sp who="#Pr">
+							<speaker>ΠΡΩ.</speaker>
+							<l n="1" xml:id="le6"> Ἦν ταῦτα.</l>
+							</sp>
+         </div>
+
+<!-- <listWit>
+	 <witness xml:id="B">cod. Bodleianus, MS E. D. Clarke 39</witness>
+	 <witness xml:id="T">cod. Venetus Append Class. 4, cod. I</witness>
+	 <witness xml:id="W">cod. Vindobonensis 54, suppl. phil. Gr. 7</witness>
+	 <witness xml:id="C">cod. Crusianus sive Tubigensis</witness>
+	 <witness xml:id="D">cod. Venetus 185</witness>
+	 <witness xml:id="G">cod. Venetus Append. Class. 4, cod. 54</witness>
+	 <witness xml:id="V">cod. Vindobonensis 109</witness>
+	 <witness xml:id="Oxy">Papyrus Oxyrinchita (Grenfell et Hunt V, pp. 243 sqq.</witness>
+</listWit>-->
+         <div type="apparatus">
+            <app loc="#lb8">
+               <lem wit="#T">Ἆρ’ οὖν οὐ τέταρτα</lem>
+               <rdg wit="#B">Ἇρ᾽ οὐ τέταρτα</rdg>
+               <rdg wit="Jackson">ἇρ᾽ οὖν οὐδ</rdg>
+            </app>
+						<app loc="#lb8"> <!-- Man kann wahrscheinlich nicht zwei Lemata in einem app machen, weil dann nicht mehr klar ist, welches rdg sich auf welches Lem bezieht, oder-->
+						<!-- sollte: <lem wit="#B Stobaeus"> sein; außerdem müssen Sie "Stobaeus" in die witListe mitaufnehmen. Das gilt für alle "witnesses".--><lem wit="#Β" wit="Stobaeus">αὐτῆς ἔθεμεν</lem> <!-- Kann man die Attribute hier irgendwie zusammenfügen?-->
+						<rdg wit="#T">ἔθεμεν αὐτῆς</rdg>
+					 </app>
+					 <app loc="#lc1">
+					 <!-- s.oben --><lem wit="#Τ" wit="Stobaeus">τέταρτα</lem>
+					 <rdg wit="#Β">τέτταρα</rdg>
+					</app>
+					<app loc="#lc1"><!-- Hier ist etwas falsch: eigentlich sollten Sie zwei Apparateinträge kodieren: einen für γε (γε T : om. B) und einen für ἢ (ἢ secl. Stallbaum)-->
+					<lem wit="#Τ">γέ</lem>
+					<rdg wit="Stallbaum"></rdg>
+				 </app>
+            
+				 <app loc="#lc5">
+				 <lem wit="Ven 189">ἐπιστήμαις</lem> <!-- Hier verstehe ich den Apperat nicht, weil ich die Angabe 189 nicht zuordnen kann. Wäre es 185, wäre es D ---Antwort: Hier müssen Sie die Präfatio von Burnet lesen; dadurch bekommen Sie eine Ahnung, was Venet. 189 ist. Und Sie müssen weiter recherchieren. -->
+				 <rdg wit="#T" wit="#B">ἐπιστήμας</rdg>
+				</app>
+				<app loc="#lc6">
+				<lem wit="Badham">τὰς</lem>
+				<rdg wit="Stobaeus" wit="#T" wit="#B">ταῖς</rdg>
+			 </app>
+			 <app loc="#lc6">
+			 <lem wit="Stobaeus" wit="#T">ἑπομένας</lem>
+			 <rdg wit="#B">ἑπόμεναι</rdg>
+			</app>
+		  <app loc="#le2">
+		  <lem wit="#B">νῦν δὴ</lem> <!-- Auch hier verstehe ich den pos. Apparat nicht, weil er als Textreferenz etwas anderes angibt, als was er tatsächlich im Text hat νυνδὴ gegen νῦν δὴ-->
+		  <rdg wit="#T" wit="Eusebius">νῦν</rdg>
+			<rdg wit="vulg.">νυνὶ</rdg>
+	    </app>
+			<app loc="#le2">
+			<lem  wit="#T">διελήλυθα</lem>
+			<rdg wit="#B">δυσχεράνας διελήλυθα</rdg>
+		 </app>
+		 <app loc="#le6">
+		 <lem wit="#B">εἴη</lem>
+		 <rdg wit="#Τ">εἴη ἂν</rdg>
+		 </app>
+		 <app loc="#le6">
+		 <lem wit="#T">μαρκῷ</lem>
+		 <rdg wit="#B">μακρὸς</rdg>
+		 </app>
+         </div>
+      </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </text>
+</TEI>
